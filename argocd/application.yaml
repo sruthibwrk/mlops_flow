@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ml
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Kapil987/Kapil987-mlops-end-to-end2.git
+    targetRevision: main
+    path: k8s
+    # Add the directory block to exclude the secret file
+    directory:
+      exclude: '3.secret.yml'
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ml
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
