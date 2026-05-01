@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  S3_BUCKET: mlops123-299029453147-us-east-1-an
+  S3_BUCKET: ml-s3-272558305029-us-east-1-an
   MODEL_PATH: models/churn_model.pkl
 
 jobs:
