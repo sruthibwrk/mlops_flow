@@ -4,12 +4,12 @@ metadata:
   name: churn-predictor
   namespace: ml
   labels:
-    model-version: "8b35afc"
+    model-version: "d5bc706"
 spec:
   predictor:
     serviceAccountName: sa-s3-access
     sklearn:
-      storageUri: s3://ml-s3-272558305029-us-east-1-an/models/churn_model-8b35afc.pkl
+      storageUri: s3://ml-s3-272558305029-us-east-1-an/models/churn_model-d5bc706.pkl
       resources:
         requests:
           cpu: "200m"
