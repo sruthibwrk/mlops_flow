@@ -187,6 +187,7 @@ k create ns ml
 kubectl apply -f k8s/1.serviceaccount.yaml
 kubectl apply -f k8s/2.inference.yaml
 kubectl apply -f k8s/3.secret.yaml
+kubectl apply -f 3.secret.yml
 ```
 
 ```bash
