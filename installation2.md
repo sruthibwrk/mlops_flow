@@ -188,6 +188,7 @@ kubectl apply -f k8s/1.serviceaccount.yaml
 kubectl apply -f k8s/2.inference.yaml
 kubectl apply -f k8s/3.secret.yaml
 kubectl apply -f 3.secret.yml
+kubectl apply -f 2.inference.yaml
 ```
 
 ```bash
@@ -209,7 +210,7 @@ churn-predictor   http://churn-predictor-ml.example.com   True
 ## 📡 Test Inference
 
 ```bash
-kubectl port-forward -n ml service/churn-predictor-predictor 8080:80 --address 0.0.0.0
+kubectl port-forward -n ml service/churn-predictor-predictor 8090:80 --address 0.0.0.0
 ```
 
 
@@ -245,7 +246,7 @@ kubectl apply -f argocd/application.yaml
 ```
 
 ```bash
-kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
+kubectl port-forward svc/argocd-server -n argocd 8089:443 --address 0.0.0.0
 ```
 
 ```bash
